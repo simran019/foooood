@@ -33,12 +33,12 @@ export const categories: ICategory[] = [
     key: Category.HOTDOG,
   },
 ];
-export type ICategoryItem={
-    id: number;
-    itemName: string;
-    price: number;
-    imgPath: string;
-}
+export type ICategoryItem = {
+  id: number;
+  itemName: string;
+  price: number;
+  imgPath: string;
+};
 export type ICategoryItems = {
   [key: string]: ICategoryItem[];
 };
@@ -64,6 +64,46 @@ export const categoryItems: ICategoryItems = {
     },
   ],
   burger: [
+    {
+      id: 1,
+      itemName: "Mushroom Burger",
+      price: 300,
+      imgPath: "/burger_1.png",
+    },
+    {
+      id: 2,
+      itemName: "Capsicum Burger",
+      price: 200,
+      imgPath: "/burger_1.png",
+    },
+    {
+      id: 3,
+      itemName: "Onion Burger",
+      price: 250,
+      imgPath: "/burger_1.png",
+    },
+  ],
+  drink: [
+    {
+      id: 1,
+      itemName: "Mushroom Burger",
+      price: 300,
+      imgPath: "/burger_1.png",
+    },
+    {
+      id: 2,
+      itemName: "Capsicum Burger",
+      price: 200,
+      imgPath: "/burger_1.png",
+    },
+    {
+      id: 3,
+      itemName: "Onion Burger",
+      price: 250,
+      imgPath: "/burger_1.png",
+    },
+  ],
+  taco: [
     {
       id: 1,
       itemName: "Mushroom Burger",

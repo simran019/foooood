@@ -1,21 +1,26 @@
 "use client";
 
-import { ICategoryItem, categories, categoryItems } from "@/lib/data";
+import { categories } from "@/lib/data";
 import Image from "next/image";
-import { useState } from "react";
 
-export default function CategoryComponent() {
-  const [items,setItems]=useState<ICategoryItem[]>([])
+type CategoryComponentProps = {
+  handleClick: (key: string) => void;
+};
 
-  function handleCategoryClick(key:string){
-    
-    setItems(categoryItems[key])
-  }
+export default function CategoryComponent({
+  handleClick,
+}: CategoryComponentProps) {
   return (
     <>
       {categories.map((category, i) => {
         return (
-          <div className="category" key={category.key} onClick={()=>{handleCategoryClick(category.key)}}>
+          <div
+            className="category"
+            key={category.key}
+            onClick={() => {
+              handleClick(category.key);
+            }}
+          >
             <div className="cat_img">
               <Image src={category.image} alt="cat" height={10} width={10} />
             </div>
